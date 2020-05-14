@@ -26,3 +26,6 @@ rm master.zip
 
 echo '########################### Installing KeePassXC'
 apt install keepassxc
+
+echo '########################### Installing pip'
+apt install python-pip
