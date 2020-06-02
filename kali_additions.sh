@@ -29,3 +29,6 @@ apt install keepassxc
 
 echo '########################### Installing pip'
 apt install python-pip
+
+echo '########################### Installing neo4j'
+apt install neo4j
