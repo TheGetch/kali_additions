@@ -1,0 +1,24 @@
+# Install oh-my-zsh:
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install dracula theme:
+wget https://github.com/dracula/zsh/archive/master.zip
+unzip master.zip
+mv zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes/
+mv zsh-master/lib/ ~/.oh-my-zsh/themes/
+
+# Install powerline
+pip3 install powerline-status
+
+# Download .zshrc - for setting 'ZSH_THEME="dracula"' and 'plugins=(git)' and '. /usr/share/powerline/bindings/zsh/powerline.zsh'
+wget https://github.com/TheGetch/kali_additions/raw/master/.zshrc
+
+# Change default shell (requires logging out and back in)
+chsh -s $(which zsh)
+
+# Download .tmux.conf
+wget https://github.com/TheGetch/kali_additions/raw/master/.tmux.conf
+
+# Install tmuxinator
+sudo gem install tmuxinator
+sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
