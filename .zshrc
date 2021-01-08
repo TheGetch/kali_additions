@@ -97,6 +97,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias powershell="pwsh"
+alias simplehttplogger="python3 /home/thegetch/pentest/python_servers/python_server-logging.py"
+alias simplehttpserver="python2.7 /home/thegetch/pentest/python_servers/python_SimpleHTTPServer_with_upload.py"
+alias simplehttpsserver="cd /home/thegetch/pentest/python_servers/ && sudo python2.7 python-simple-https-server.py"
+alias updateos="sudo ~/update_os.sh"
+alias dirsearch="python3 ~/pentest/dirsearch/dirsearch.py"
+alias sgn="/home/thegetch/pentest/sgn_linux_amd64_2.0/sgn"
+alias enum4linux-ng="python3 /home/thegetch/pentest/enum4linux-ng/enum4linux-ng.py"
+alias nmapme="sudo nmap -Pn -sS -A -T4 -vvv -p- -oN nmap_output.txt"
+alias msflisten='sudo msfconsole -q -x "use exploit/multi/handler;set PAYLOAD linux/x86/meterpreter/reverse_tcp;set LHOST 10.10.14.7;set LPORT 4444;exploit -j"'
+
 export EDITOR='vim'
 
 . /usr/share/powerline/bindings/zsh/powerline.zsh
