@@ -12,12 +12,11 @@ pip3 install powerline-status
 
 # Download .zshrc - for setting 'ZSH_THEME="dracula"' and 'plugins=(git)' and '. /usr/share/powerline/bindings/zsh/powerline.zsh'
 wget https://raw.githubusercontent.com/TheGetch/kali_additions/master/.zshrc
-wget https://raw.githubusercontent.com/TheGetch/kali_additions/master/powerline.zsh
+wget https://github.com/TheGetch/kali_additions/raw/master/powerline_bindings.tar.gz
 
+tar -xvf powerline_bindings.tar.gz
 sudo mkdir /usr/share/powerline
-sudo mkdir /usr/share/bindings
-sudo mkdir /usr/share/zsh
-sudo mv powerline.zsh /usr/share/powerline/bindings/zsh/
+mv bindings /usr/share/powerline
 
 # Change default shell (requires logging out and back in)
 chsh -s $(which zsh)
